@@ -32,31 +32,35 @@
                 <!-- Each form tag is Each row, This will render multiple times on Clicking 'Add Another Match' -->
                 <div class="match">
                     <div class="wrapper">
-                        <button class="lws-delete">
+                        <button  class="lws-delete" onclick="handleDeleteMatch(1)">
                             <img src="./image/delete.svg" alt="" />
                         </button>
                         <h3 class="lws-matchName">Match 1</h3>
                     </div>
                     <div class="inc-dec">
-                        <form class="incrementForm">
+                        <form class="incrementForm" onsubmit="event.preventDefault(); handleIncrease(1 , this)">
                             <h4>Increment</h4>
                             <input
                                 type="number"
                                 name="increment"
                                 class="lws-increment"
+                                value="0"
+                              
                             />
                         </form>
-                        <form class="decrementForm">
+                        <form class="decrementForm" onsubmit="event.preventDefault(); handledecrease(1 , this)">
                             <h4>Decrement</h4>
                             <input
                                 type="number"
                                 name="decrement"
                                 class="lws-decrement"
+                                value="0"
+                               
                             />
                         </form>
                     </div>
                     <div class="numbers">
-                        <h2 class="lws-singleResult">120</h2>
+                        <h2 class="lws-singleResult">0</h2>
                     </div>
                 </div>
             </div>
@@ -87,6 +91,6 @@
 
         <section class="mask"></section>
 
-        <script src="./script.js"></script>
+        <script src="./app.js"></script>
     </body>
 </html>
